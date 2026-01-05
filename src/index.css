@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-tanigma-aqua: #83c0c1;
+  --color-tanigma-sky: #cde8f7;
+  --color-tanigma-blush: #ffd9dc;
+  --color-tanigma-rose: #eb8db5;
+  --color-tanigma-mauve: #d4a3c4;
+}
