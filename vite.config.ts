@@ -1,4 +1,5 @@
 import eslintPlugin from '@nabla/vite-plugin-eslint';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig, loadEnv } from 'vite';
 import { checker } from 'vite-plugin-checker';
@@ -34,6 +35,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       react(),
+      tailwindcss(),
       checker({
         overlay: false,
         terminal: true,
