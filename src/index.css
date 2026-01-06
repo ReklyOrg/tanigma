@@ -22,5 +22,6 @@
 
 html,
 body {
-  background: #ffd9dc;
+  /* background: #ffd9dc; */
+  background: color-mix(in srgb, #ffd9dc, transparent 50%);
 }

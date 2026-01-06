@@ -1,12 +1,15 @@
 import { Footer } from '@/components/footer';
 import Header from '@/components/header';
+import { MainSection } from '@/components/main-section';
 
 const App = () => (
   <section className=''>
     {/* <section className='bg-tanigma-blush'> */}
     <Header />
 
-    <div className='flex h-screen justify-center items-center' />
+    <MainSection />
+
+    <div className='h-25'>Test</div>
 
     <Footer />
   </section>

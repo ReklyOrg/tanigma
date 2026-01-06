@@ -1,19 +1,17 @@
 import logo from '@/assets/black-logo.png';
 
-const Header = () => {
-  const a = 2;
-
-  return (
-    <div className='px-5 flex flex-row justify-between items-center gap-5'>
+const Header = () => (
+  <div className='z-50 px-20 py-5'>
+    <div className='w-full flex flex-col sm:flex-row justify-between items-center gap-5 '>
       <img
         alt='Logo'
-        className='w-30'
+        className='w-50'
         src={logo}
       />
 
-      <h2 className='font-tanigma-text text-tanigma-aqua font-bold text-5xl'>Header</h2>
+      <h2 className='hidden sm:flex font-tanigma-text text-tanigma-aqua font-bold text-5xl'>Header</h2>
     </div>
-  );
-};
+  </div>
+);
 
 export default Header;
