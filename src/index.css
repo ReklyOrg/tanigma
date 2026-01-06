@@ -9,19 +9,97 @@
 }
 
 @theme {
+  /* =========================
+     Brand Base
+  ========================= */
   --color-tanigma-aqua: #83c0c1;
   --color-tanigma-sky: #cde8f7;
   --color-tanigma-blush: #ffd9dc;
   --color-tanigma-rose: #eb8db5;
   --color-tanigma-mauve: #d4a3c4;
 
-  --font-tanigma-titles: 'Alice', sans-serif;
+  /* =========================
+     Backgrounds
+  ========================= */
+  --color-tanigma-bg-page: #fff5f6;
+  --color-tanigma-bg-section: #f3ebf2;
+  --color-tanigma-bg-card: #ffffff;
+  --color-tanigma-bg-soft: #eaf6f6;
+  --color-tanigma-bg-overlay: rgba(255, 217, 220, 0.6);
+
+  /* =========================
+     Primary (Aqua)
+  ========================= */
+  --color-tanigma-primary: #83c0c1;
+  --color-tanigma-primary-hover: #6aa9aa;
+  --color-tanigma-primary-active: #528f90;
+  --color-tanigma-on-primary: #0e2e2f;
+
+  /* =========================
+     Secondary (Mauve)
+  ========================= */
+  --color-tanigma-secondary: #d4a3c4;
+  --color-tanigma-secondary-hover: #c18bb0;
+  --color-tanigma-secondary-active: #a96a96;
+  --color-tanigma-on-secondary: #2b1726;
+
+  /* =========================
+     Accent / CTA (Rose)
+  ========================= */
+  --color-tanigma-accent: #eb8db5;
+  --color-tanigma-accent-hover: #e270a3;
+  --color-tanigma-accent-active: #c8568a;
+  --color-tanigma-on-accent: #ffffff;
+
+  /* =========================
+     Highlight (Blush)
+  ========================= */
+  --color-tanigma-highlight: #ffd9dc;
+  --color-tanigma-highlight-hover: #ffc2c8;
+  --color-tanigma-on-highlight: #4a1f2a;
+
+  /* =========================
+     Text
+  ========================= */
+  --color-tanigma-text-primary: #2b2b2f;
+  --color-tanigma-text-secondary: #5a5a66;
+  --color-tanigma-text-muted: #8a8a96;
+  --color-tanigma-text-inverse: #ffffff;
+
+  /* =========================
+     Borders & UI
+  ========================= */
+  --color-tanigma-border-light: #e6dde3;
+  --color-tanigma-border-default: #d1c5cc;
+  --color-tanigma-border-strong: #b9adb5;
+  --color-tanigma-focus-ring: #83c0c1;
+
+  /* =========================
+     Status (soft & on-brand)
+  ========================= */
+  --color-tanigma-success: #8fcad3;
+  --color-tanigma-warning: #f0b7a4;
+  --color-tanigma-error: #e07a8f;
+  --color-tanigma-info: #cde8f7;
+
+  /* =========================
+     Fonts
+  ========================= */
+  --font-tanigma-titles: 'Alice', serif;
   --font-tanigma-text: 'Dosis', sans-serif;
   --font-tanigma-variation: 'Benedict', sans-serif;
+
+  /* =========================
+     Radius (optional but recommended)
+  ========================= */
+  --radius-tanigma-sm: 0.5rem;
+  --radius-tanigma-md: 0.75rem;
+  --radius-tanigma-lg: 1rem;
+  --radius-tanigma-xl: 1.25rem;
 }
 
 html,
 body {
-  /* background: #ffd9dc; */
-  background: color-mix(in srgb, #ffd9dc, transparent 50%);
+  background: var(--color-tanigma-bg-page);
+  /* background: color-mix(in oklab, var(--color-tanigma-blush), transparent 90%); */
 }
