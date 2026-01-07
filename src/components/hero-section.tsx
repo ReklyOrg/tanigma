@@ -1,8 +1,8 @@
 import aerialYogaMobile from '@/assets/aerial-yoga-mobile.png';
 import aerialYoga from '@/assets/aerial-yoga.png';
-import TanigmaButton from '@/ui/tanigma-button';
+import ScheduleClassButton from '@/components/schedule-class-button';
 
-export const HeroSection = () => (
+const HeroSection = () => (
   <div
     // 100vh - header height
     className='h-[calc(100vh-240px)] max-lg:min-h-250 w-full'
@@ -30,12 +30,11 @@ export const HeroSection = () => (
             Encontra o teu equilíbrio e voa com leveza
           </h1>
 
-          <TanigmaButton
-            label='Marcar aula'
-            variant='accent'
-          />
+          <ScheduleClassButton />
         </div>
       </div>
     </div>
   </div>
 );
+
+export default HeroSection;

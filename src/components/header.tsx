@@ -1,20 +1,17 @@
 import logo from '@/assets/black-logo.png';
-import TanigmaButton from '@/ui/tanigma-button';
+import ScheduleClassButton from '@/components/schedule-class-button';
 
 const Header = () => (
-  <div className='z-50 px-20 py-5'>
-    <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-5 '>
+  <div className='sticky px-20 py-5 z-50'>
+    <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-5'>
       <img
         alt='Logo'
-        className='w-50'
+        className='w-32 lg:w-50'
         src={logo}
       />
 
       <div className='hidden lg:flex'>
-        <TanigmaButton
-          label='Marcar aula'
-          variant='accent'
-        />
+        <ScheduleClassButton />
       </div>
     </div>
   </div>

@@ -100,6 +100,6 @@
 
 html,
 body {
-  background: var(--color-tanigma-bg-page);
+  background: var(--color-tanigma-bg-soft);
   /* background: color-mix(in oklab, var(--color-tanigma-blush), transparent 90%); */
 }
