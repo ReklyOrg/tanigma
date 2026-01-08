@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,7 +11,8 @@
     "clean": "rm -rf dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "depcheck": "pnpm dlx depcheck --quiet"
+    "depcheck": "pnpm dlx depcheck --quiet",
+    "build-image-beta": "docker build -t tanigma-website:beta ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
