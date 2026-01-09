@@ -13,16 +13,16 @@ import tseslint from 'typescript-eslint';
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    name: 'Files',
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     extends: [js.configs.recommended, tseslint.configs.recommended, reactRefresh.configs.vite],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    name: 'Files',
   },
   {
-    name: 'Options',
     languageOptions: {
       ecmaVersion: 2020,
       globals: { ...globals.browser, ...globals.node },
     },
+    name: 'Options',
     settings: { react: { version: 'detect' } },
   },
   {
@@ -32,7 +32,6 @@ export default defineConfig([
       ...pluginReact.configs.flat.recommended.rules,
       ...pluginReact.configs.flat['jsx-runtime'].rules,
       'arrow-body-style': ['error', 'as-needed'],
-      'react/require-default-props': 'off',
       'react/display-name': 'error',
       'react/jsx-boolean-value': 'error',
       'react/jsx-curly-brace-presence': [
@@ -54,6 +53,7 @@ export default defineConfig([
       'react/prefer-es6-class': 'error',
       'react/prefer-stateless-function': 'error',
       'react/react-in-jsx-scope': 'off',
+      'react/require-default-props': 'off',
       'react/self-closing-comp': 'error',
       'react/sort-prop-types': 'warn',
     },
@@ -66,8 +66,8 @@ export default defineConfig([
     rules: {
       ...reactHooks.configs.recommended.rules,
       // React
-      'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
     },
   },
   {
@@ -82,11 +82,11 @@ export default defineConfig([
       'unused-imports/no-unused-vars': [
         'warn',
         {
-          vars: 'all',
-          varsIgnorePattern: '^_',
           args: 'after-used',
           argsIgnorePattern: '^_',
           ignoreRestSiblings: true,
+          vars: 'all',
+          varsIgnorePattern: '^_',
         },
       ],
     },
@@ -96,6 +96,19 @@ export default defineConfig([
     ...eslintPluginUnicorn.configs.recommended,
     rules: {
       ...eslintPluginUnicorn.configs.recommended.rules,
+
+      'unicorn/filename-case': [
+        'error',
+        {
+          cases: {
+            kebabCase: true,
+            pascalCase: true,
+          },
+          ignore: [/^(?:.*\/)*routes\/.*\.(js|ts|jsx|tsx)$/],
+        },
+      ],
+      'unicorn/no-null': ['off'],
+      'unicorn/no-useless-undefined': ['off'],
       'unicorn/prevent-abbreviations': [
         'error',
         {
@@ -107,27 +120,15 @@ export default defineConfig([
           },
         },
       ],
-      'unicorn/no-useless-undefined': ['off'],
-      'unicorn/no-null': ['off'],
-      'unicorn/filename-case': [
-        'error',
-        {
-          cases: {
-            kebabCase: true,
-            pascalCase: true,
-          },
-          ignore: [/^(?:.*\/)*routes\/.*\.(js|ts|jsx|tsx)$/],
-        },
-      ],
     },
   },
   {
     name: 'Custom rules',
     rules: {
-      eqeqeq: ['error', 'always', { null: 'ignore' }],
-      'object-shorthand': ['error', 'always'],
-      'no-useless-computed-key': 'error',
       '@typescript-eslint/no-use-before-define': ['error'],
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
+      'no-useless-computed-key': 'error',
+      'object-shorthand': ['error', 'always'],
       'prefer-template': 'error',
       'sort-keys': ['warn', 'asc', { natural: true }],
     },
@@ -135,7 +136,7 @@ export default defineConfig([
   // Needs to be at the end of all rules
   eslintConfigPrettier,
   {
-    name: 'Files/folders to ignore',
     ignores: ['node_modules/**', 'dist/**', 'build/**', '**/generated/**', '**/routeTree.gen.ts', 'cypress/**'],
+    name: 'Files/folders to ignore',
   },
 ]);
