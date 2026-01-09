@@ -24,5 +24,5 @@ docs for more detail on building and pushing.
 
 ### Local registry
 
-`docker build --platform=linux/amd64 -t myregistry.com/tanigma-website:latest`.
+`docker build --platform=linux/amd64 -t myregistry.com/tanigma-website:latest .`.
 `docker push myregistry.com/tanigma-website:latest`.
