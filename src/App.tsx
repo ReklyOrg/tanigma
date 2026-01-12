@@ -1,8 +1,10 @@
 import { useMemo } from 'react';
 
+import ClassesAndServices from '@/components/classes-and-services';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import HeroSection from '@/components/hero-section';
+import WhoAreWe from '@/components/who-are-we';
 
 const App = () => {
   const buildDate = useMemo(() => {
@@ -19,8 +21,10 @@ const App = () => {
 
       <HeroSection />
 
-      <div className='h-100 bg-tanigma-bg-soft'>Descrição sobre o estúdio</div>
-      <div className='h-100 bg-white'>Aulas e/ou atividades</div>
+      <WhoAreWe />
+
+      <ClassesAndServices />
+
       <div className='h-100 bg-tanigma-bg-page'>Horários (Pode ser na descrição das atividades se for fixo)</div>
       <div className='h-100 bg-tanigma-bg-section'>Equipa???</div>
 
