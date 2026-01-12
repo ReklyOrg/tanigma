@@ -1,9 +1,11 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa6';
 
 import logo from '@/assets/black-logo.png';
+import { TANIGMA_EMAIL, TANIGMA_PHONE_NUMBER } from '@/constants/constants';
 import AtIcon from '@/icons/at-icon';
 import LocationIcon from '@/icons/location-icon';
 import PhoneIcon from '@/icons/phone-icon';
+import { formatInTriplets } from '@/utils/utilities';
 
 const Footer = () => (
   <div className='bg-tanigma-secondary min-h-60 h-full py-5 flex justify-center items-center'>
@@ -41,7 +43,9 @@ const Footer = () => (
           <div className='flex gap-2'>
             <PhoneIcon className='text-tanigma-on-secondary mt-1.5' />
 
-            <p className='font-tanigma-text text-lg text-tanigma-on-secondary'>+351 911 928 526</p>
+            <p className='font-tanigma-text text-lg text-tanigma-on-secondary'>
+              +{formatInTriplets(TANIGMA_PHONE_NUMBER)}
+            </p>
           </div>
 
           <div className='flex gap-2'>
@@ -49,9 +53,9 @@ const Footer = () => (
 
             <a
               className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
-              href='mailto:tanigmaestudio@gmail.com'
+              href={`mailto:${TANIGMA_EMAIL}`}
             >
-              tanigmaestudio@gmail.com
+              {TANIGMA_EMAIL}
             </a>
           </div>
         </div>
@@ -82,7 +86,7 @@ const Footer = () => (
         </a>
 
         <a
-          href='https://wa.me/351911928526'
+          href={`https://wa.me/${TANIGMA_PHONE_NUMBER}`}
           rel='noreferrer'
           target='_blank'
         >
