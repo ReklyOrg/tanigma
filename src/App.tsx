@@ -1,24 +1,35 @@
+import { useMemo } from 'react';
+
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import HeroSectionVariant from '@/components/hero-section-variant';
+import HeroSection from '@/components/hero-section';
 
-// import HeroSection from '@/components/hero-section';
+const App = () => {
+  const buildDate = useMemo(() => {
+    try {
+      return new Date(APP_VERSION_DATE).toLocaleString();
+    } catch {
+      return '';
+    }
+  }, []);
 
-const App = () => (
-  <section className=''>
-    {/* <section className='bg-tanigma-blush'> */}
-    <Header />
+  return (
+    <section className=''>
+      <Header />
 
-    {/* <HeroSection /> */}
-    <HeroSectionVariant />
+      <HeroSection />
 
-    <div className='h-100 bg-tanigma-bg-soft'>Descrição sobre o estúdio</div>
-    <div className='h-100 bg-white'>Aulas e/ou atividades</div>
-    <div className='h-100 bg-tanigma-bg-page'>Horários (Pode ser na descrição das atividades se for fixo)</div>
-    <div className='h-100 bg-tanigma-bg-section'>Equipa???</div>
+      <div className='h-100 bg-tanigma-bg-soft'>Descrição sobre o estúdio</div>
+      <div className='h-100 bg-white'>Aulas e/ou atividades</div>
+      <div className='h-100 bg-tanigma-bg-page'>Horários (Pode ser na descrição das atividades se for fixo)</div>
+      <div className='h-100 bg-tanigma-bg-section'>Equipa???</div>
 
-    <Footer />
-  </section>
-);
+      <Footer />
+
+      {/* TODO: remove */}
+      <p className='text-red-400 bg-white text-center py-2'>Última atualização em: {buildDate}.</p>
+    </section>
+  );
+};
 
 export default App;

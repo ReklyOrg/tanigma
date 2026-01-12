@@ -1,37 +1,22 @@
-import aerialYogaMobile from '@/assets/aerial-yoga-mobile.png';
-import aerialYoga from '@/assets/aerial-yoga.png';
+import aerialYoga from '@/assets/close-fabrics.jpeg';
 import ScheduleClassButton from '@/components/schedule-class-button';
 
 const HeroSection = () => (
-  <div
-    // 100vh - header height
-    className='h-[calc(100vh-240px)] max-lg:min-h-250 w-full'
-  >
-    <div className='relative min-h-full w-full'>
-      <div>
-        {/* Larger screens */}
-        <img
-          alt='mulher praticando aerial yoga'
-          className='max-lg:hidden absolute h-full w-full object-cover object-right overflow-hidden mask-b-from-50% mask-b-to-100% mask-t-from-90% mask-t-to-100% z-0'
-          src={aerialYoga}
-        />
+  <div className='h-[calc(100vh-168px)] lg:h-[calc(100vh-240px)] w-full'>
+    <div
+      className='absolute inset-0 bg-no-repeat bg-cover overflow-hidden bg-center z-0 mask-b-from-50% mask-b-to-100%  max-lg:mask-t-from-70% max-lg:mask-t-to-100%'
+      style={{
+        backgroundImage: `url(${aerialYoga})`,
+      }}
+    />
 
-        {/* Small screens */}
-        <img
-          alt='mulher praticando aerial yoga'
-          className='lg:hidden absolute h-full w-full object-cover object-center overflow-hidden mask-b-from-50% mask-b-to-100% mask-t-from-90% mask-t-to-100% z-0'
-          src={aerialYogaMobile}
-        />
-      </div>
+    <div className='absolute top-6/10 lg:top-1/2 left-1/2 -translate-1/2'>
+      <div className='flex flex-col gap-14 items-center'>
+        <h1 className='w-screen m-0 lg:max-w-5xl font-tanigma-variation font-bold text-5xl md:text-7xl lg:text-9xl text-tanigma-bg-card text-center drop-shadow-sm'>
+          Encontra o teu equilíbrio e voa com leveza
+        </h1>
 
-      <div className='absolute top-1/5 sm:top-3/8 left-0 lg:left-[1vw] xl:left-[10vw] p-10 pt-20'>
-        <div className='flex flex-col gap-14 items-center'>
-          <h1 className='max-w-5xl font-tanigma-variation font-bold text-5xl md:text-7xl lg:text-9xl text-tanigma-primary text-center drop-shadow-md'>
-            Encontra o teu equilíbrio e voa com leveza
-          </h1>
-
-          <ScheduleClassButton />
-        </div>
+        <ScheduleClassButton />
       </div>
     </div>
   </div>
