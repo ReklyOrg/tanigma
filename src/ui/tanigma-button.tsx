@@ -30,7 +30,9 @@ const TanigmaButton = ({ className, label, variant = 'primary' }: TanigmaButtonP
 
   return (
     <div>
-      <button className={twMerge('cursor-pointer px-6 py-3 rounded-xl', variantClasses, className)}>{label}</button>
+      <button className={twMerge('cursor-pointer px-6 py-3 rounded-tanigma-sm', variantClasses, className)}>
+        {label}
+      </button>
     </div>
   );
 };

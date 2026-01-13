@@ -8,7 +8,7 @@ import PhoneIcon from '@/icons/phone-icon';
 import { formatInTriplets } from '@/utils/utilities';
 
 const Footer = () => (
-  <div className='bg-tanigma-secondary min-h-60 h-full py-5 flex justify-center items-center'>
+  <div className='md:rounded-tanigma-sm bg-tanigma-secondary min-h-60 h-full py-5 flex justify-center items-center md:shadow md:shadow-tanigma-border-light'>
     <div className='flex flex-col lg:flex-row justify-evenly items-center gap-10 p-4 w-full max-w-7xl'>
       {/* Logo */}
       <div className='flex flex-col items-center'>
@@ -18,7 +18,7 @@ const Footer = () => (
           src={logo}
         />
 
-        <hr className='w-56 lg:w-full border rounded-xl border-tanigma-on-secondary' />
+        <hr className='w-56 lg:w-full border rounded-tanigma-sm border-tanigma-on-secondary' />
 
         <br />
         <p className='text-tanigma-on-secondary font-tanigma-variation text-4xl'>Leveza, força e entrega.</p>
@@ -31,13 +31,18 @@ const Footer = () => (
           <div className='flex gap-2'>
             <LocationIcon className='text-tanigma-on-secondary mt-1.5' />
 
-            <p className='font-tanigma-text text-lg text-tanigma-on-secondary'>
+            <a
+              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+              href='https://maps.app.goo.gl/tAEYDNJ1SDVr4jec6'
+              rel='noreferrer'
+              target='_blank'
+            >
               Largo Conselheiro Arnaldo Norton de Matos, Nº41
               <br />
               Ponte de Lima, 4990-081
               <br />
               Portugal
-            </p>
+            </a>
           </div>
 
           <div className='flex gap-2'>

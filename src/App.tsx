@@ -1,9 +1,10 @@
 import { useMemo } from 'react';
 
-import ClassesAndServices from '@/components/classes-and-services';
+import ClassesAndServices from '@/components/classes-and-services/classes-and-services';
 import Footer from '@/components/footer';
+import { GallerySection } from '@/components/gallery-section/gallery-section';
 import Header from '@/components/header';
-import HeroSection from '@/components/hero-section';
+import HeroSection from '@/components/hero/hero-section';
 import WhoAreWe from '@/components/who-are-we';
 
 const App = () => {
@@ -16,23 +17,24 @@ const App = () => {
   }, []);
 
   return (
-    <section className=''>
+    <div>
       <Header />
 
       <HeroSection />
 
-      <WhoAreWe />
+      <div className='flex flex-col md:gap-10 md:p-10'>
+        <WhoAreWe />
 
-      <ClassesAndServices />
+        <ClassesAndServices />
 
-      <div className='h-100 bg-tanigma-bg-page'>Horários (Pode ser na descrição das atividades se for fixo)</div>
-      <div className='h-100 bg-tanigma-bg-section'>Equipa???</div>
+        <GallerySection />
 
-      <Footer />
+        <Footer />
+      </div>
 
       {/* TODO: remove */}
       <p className='text-red-400 bg-white text-center py-2'>Última atualização em: {buildDate}.</p>
-    </section>
+    </div>
   );
 };
 
