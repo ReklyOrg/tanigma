@@ -16,7 +16,7 @@ const HeroSection = () => (
           Encontra o teu equilíbrio e voa com leveza
         </h1>
 
-        <ScheduleClassButton />
+        <ScheduleClassButton context='generic' />
       </div>
     </div>
   </section>

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface TanigmaButtonProps {
+export interface TanigmaButtonProps {
   label: string;
   className?: Element['className'];
   variant?: 'primary' | 'secondary' | 'accent';

@@ -15,7 +15,7 @@ const classesAndServices = () => (
       </div>
 
       {/* <div className='container mx-auto'> */}
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
+      <div className='columns-1 lg:columns-2 xl:columns-3 gap-10 [column-fill:balance] box-border mx-auto before:box-inherit after:box-inherit'>
         {CLASSES_AND_SERVICES.map((classOrService) => (
           <ClassOrServiceCard
             classOrService={classOrService}

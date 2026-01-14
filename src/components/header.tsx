@@ -11,7 +11,7 @@ const Header = () => (
       />
 
       <div className='hidden lg:flex'>
-        <ScheduleClassButton />
+        <ScheduleClassButton context='generic' />
       </div>
     </div>
   </div>
