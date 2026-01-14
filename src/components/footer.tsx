@@ -32,7 +32,7 @@ const Footer = () => (
             <LocationIcon className='text-tanigma-on-secondary mt-1.5' />
 
             <a
-              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
               href='https://maps.app.goo.gl/tAEYDNJ1SDVr4jec6'
               rel='noreferrer'
               target='_blank'
@@ -48,16 +48,19 @@ const Footer = () => (
           <div className='flex gap-2'>
             <PhoneIcon className='text-tanigma-on-secondary mt-1.5' />
 
-            <p className='font-tanigma-text text-lg text-tanigma-on-secondary'>
+            <a
+              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
+              href={`tel:+${formatInTriplets(TANIGMA_PHONE_NUMBER)}`}
+            >
               +{formatInTriplets(TANIGMA_PHONE_NUMBER)}
-            </p>
+            </a>
           </div>
 
           <div className='flex gap-2'>
             <AtIcon className='text-tanigma-on-secondary mt-1.5' />
 
             <a
-              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+              className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
               href={`mailto:${TANIGMA_EMAIL}`}
             >
               {TANIGMA_EMAIL}
@@ -74,7 +77,7 @@ const Footer = () => (
           target='_blank'
         >
           <FaInstagram
-            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
             size={40}
           />
         </a>
@@ -85,7 +88,7 @@ const Footer = () => (
           target='_blank'
         >
           <FaFacebookF
-            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
             size={36}
           />
         </a>
@@ -96,7 +99,7 @@ const Footer = () => (
           target='_blank'
         >
           <FaWhatsapp
-            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover'
+            className='text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
             size={40}
           />
         </a>

@@ -16,6 +16,7 @@ export const ClassOrServiceCard = ({ classOrService }: ClassOrServiceCardProps) 
       <img
         alt={`Imagem de ${classOrService.title}`}
         className={twMerge('h-full max-h-115 w-full object-cover mask-b-from-40%', classOrService.imageClasseName)}
+        loading='lazy'
         src={classOrService.image}
       />
     </div>
