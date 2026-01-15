@@ -8,9 +8,14 @@ import pilates from '@/assets/pilates.jpg';
 import reiki from '@/assets/reiki.jpg';
 import relaxSession from '@/assets/relax-session.jpg';
 
-export interface ClassOrServicePrice {
+export interface ClassOrServiceSubPrice {
   name: string;
   value: number;
+}
+
+export interface ClassOrServicePrice {
+  name: string;
+  value: number | Array<ClassOrServiceSubPrice>;
 }
 
 export interface ClassOrServiceSchedule {
@@ -37,8 +42,13 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
     ],
     groupPrices: [
       {
-        name: '1 vez por semana',
-        value: 30,
+        name: 'Mensalidade',
+        value: [
+          {
+            name: '1 vez por semana',
+            value: 30,
+          },
+        ],
       },
       {
         name: 'Aula',
@@ -70,8 +80,13 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
     ],
     groupPrices: [
       {
-        name: '1 vez por semana',
-        value: 30,
+        name: 'Mensalidade',
+        value: [
+          {
+            name: '1 vez por semana',
+            value: 30,
+          },
+        ],
       },
       {
         name: 'Aula',
@@ -100,16 +115,21 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
     ],
     groupPrices: [
       {
-        name: '1 vez por semana',
-        value: 35,
-      },
-      {
-        name: '2 vez por semana',
-        value: 45,
-      },
-      {
-        name: '3 vez por semana',
-        value: 50,
+        name: 'Mensalidade',
+        value: [
+          {
+            name: '1 vez por semana',
+            value: 35,
+          },
+          {
+            name: '2 vez por semana',
+            value: 45,
+          },
+          {
+            name: '3 vez por semana',
+            value: 50,
+          },
+        ],
       },
       {
         name: 'Aula',
@@ -170,16 +190,21 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
     ],
     groupPrices: [
       {
-        name: '1 vez por semana',
-        value: 35,
-      },
-      {
-        name: '2 vez por semana',
-        value: 45,
-      },
-      {
-        name: '3 vez por semana',
-        value: 50,
+        name: 'Mensalidade',
+        value: [
+          {
+            name: '1 vez por semana',
+            value: 35,
+          },
+          {
+            name: '2 vez por semana',
+            value: 45,
+          },
+          {
+            name: '3 vez por semana',
+            value: 50,
+          },
+        ],
       },
       {
         name: 'Aula',
@@ -218,8 +243,13 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
     image: pilates,
     otherPrices: [
       {
-        name: '1 vez por semana',
-        value: 20,
+        name: 'Mensalidade',
+        value: [
+          {
+            name: '1 vez por semana',
+            value: 20,
+          },
+        ],
       },
       {
         name: 'Aula',

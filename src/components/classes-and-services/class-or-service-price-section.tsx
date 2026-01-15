@@ -17,7 +17,25 @@ const ClassOrServicePriceSection = ({ label, prices }: ClassOrServicePriceSectio
           className='font-tanigma-text text-tanigma-text-secondary'
           key={price.name}
         >
-          {price.name}: <span className='font-medium'>{formatToEuro(price.value)}</span>
+          {Array.isArray(price.value) ? (
+            <>
+              {price.name}:
+              <ul className='list-[circle] pl-5 marker:text-tanigma-text-muted'>
+                {price.value.map((subPrice) => (
+                  <li
+                    className='font-tanigma-text text-tanigma-text-secondary'
+                    key={subPrice.name}
+                  >
+                    {subPrice.name}: <span className='font-medium'>{formatToEuro(subPrice.value)}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <>
+              {price.name}: <span className='font-medium'>{formatToEuro(price.value)}</span>
+            </>
+          )}
         </li>
       ))}
     </ul>
