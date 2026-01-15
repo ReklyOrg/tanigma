@@ -8,34 +8,34 @@ import pilates from '@/assets/pilates.jpg';
 import reiki from '@/assets/reiki.jpg';
 import relaxSession from '@/assets/relax-session.jpg';
 
-export interface ClassOrServiceSubPrice {
+export interface ClassOrSessionSubPrice {
   name: string;
   value: number;
 }
 
-export interface ClassOrServicePrice {
+export interface ClassOrSessionPrice {
   name: string;
-  value: number | Array<ClassOrServiceSubPrice>;
+  value: number | Array<ClassOrSessionSubPrice>;
 }
 
-export interface ClassOrServiceSchedule {
+export interface ClassOrSessionSchedule {
   name: string;
   hour: string;
 }
 
-export interface ClassOrService {
+export interface ClassOrSession {
   image: string;
   title: string;
   description: Array<string>;
-  individualPrices?: Array<ClassOrServicePrice>;
-  otherPrices?: Array<ClassOrServicePrice>;
-  groupPrices?: Array<ClassOrServicePrice>;
-  schedule?: Array<ClassOrServiceSchedule>;
-  type: 'class' | 'service';
+  individualPrices?: Array<ClassOrSessionPrice>;
+  otherPrices?: Array<ClassOrSessionPrice>;
+  groupPrices?: Array<ClassOrSessionPrice>;
+  schedule?: Array<ClassOrSessionSchedule>;
+  type: 'class' | 'session';
   imageClasseName?: string;
 }
 
-export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
+export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
   {
     description: [
       'Aerial Yoga Kids é uma atividade divertida e segura que combina o yoga com o uso de tecido suspenso. De forma lúdica, as crianças desenvolvem coordenação, força, equilíbrio e flexibilidade, ao mesmo tempo que estimulam a concentração, a criatividade e a autoconfiança. As aulas respeitam o ritmo de cada criança e promovem o bem-estar físico e emocional através do movimento e da brincadeira.',
@@ -297,7 +297,7 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
       },
     ],
     title: 'Reiki',
-    type: 'service',
+    type: 'session',
   },
   {
     description: [
@@ -316,6 +316,6 @@ export const CLASSES_AND_SERVICES: Array<ClassOrService> = [
       },
     ],
     title: 'Numerologia',
-    type: 'service',
+    type: 'session',
   },
 ] as const;

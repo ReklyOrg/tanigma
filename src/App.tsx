@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import ClassesAndServices from '@/components/classes-and-services/classes-and-services';
+import ClassesAndSessions from '@/components/classes-and-sessions/classes-and-sessions';
 import Footer from '@/components/footer';
 import { GallerySection } from '@/components/gallery-section/gallery-section';
 import Header from '@/components/header';
@@ -25,7 +25,7 @@ const App = () => {
       <div className='flex flex-col md:gap-10 md:p-10'>
         <WhoAreWe />
 
-        <ClassesAndServices />
+        <ClassesAndSessions />
 
         <GallerySection />
 

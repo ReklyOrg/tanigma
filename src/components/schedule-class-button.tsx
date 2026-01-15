@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import {
   TANIGMA_BOOK_CLASS_WHATSAPP_MESSAGE,
-  TANIGMA_BOOK_SERVICE_WHATSAPP_MESSAGE,
+  TANIGMA_BOOK_SESSION_WHATSAPP_MESSAGE,
   TANIGMA_WHATSAPP_MESSAGE,
 } from '@/constants/constants';
 import TanigmaButton from '@/ui/tanigma-button';
@@ -13,12 +13,12 @@ type ScheduleClassButtonBaseProps = Partial<TanigmaButtonProps>;
 
 type GenericContext = { context: 'generic' };
 type ClassContext = { context: 'class'; name: string };
-type ServiceContext = { context: 'service'; name: string };
+type SessionContext = { context: 'session'; name: string };
 
 type ScheduleClassButtonProps =
   | (ScheduleClassButtonBaseProps & GenericContext)
   | (ScheduleClassButtonBaseProps & ClassContext)
-  | (ScheduleClassButtonBaseProps & ServiceContext);
+  | (ScheduleClassButtonBaseProps & SessionContext);
 
 const ScheduleClassButton = ({
   className,
@@ -40,8 +40,8 @@ const ScheduleClassButton = ({
         break;
       }
 
-      case 'service': {
-        message = `${TANIGMA_BOOK_SERVICE_WHATSAPP_MESSAGE} ${rest.name.toLocaleLowerCase()}.`;
+      case 'session': {
+        message = `${TANIGMA_BOOK_SESSION_WHATSAPP_MESSAGE} ${rest.name.toLocaleLowerCase()}.`;
         break;
       }
 

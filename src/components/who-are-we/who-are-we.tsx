@@ -21,8 +21,8 @@ const WhoAreWe = () => (
             </WhoAreWeParagraph>
 
             <WhoAreWeParagraph>
-              Através do aerial yoga, aerial pilates, reiki e outras aulas e serviços, convidamos cada pessoa a escutar
-              o seu corpo, a respeitar o seu ritmo e a viver momentos de conexão, confiança e liberdade. Aqui, o
+              Através do aerial yoga, aerial pilates, reiki entre outras aulas e sessões, convidamos cada pessoa a
+              escutar o seu corpo, a respeitar o seu ritmo e a viver momentos de conexão, confiança e liberdade. Aqui, o
               exercício vai além do físico: é também uma prática de consciência e autocuidado.
             </WhoAreWeParagraph>
 

@@ -1,10 +1,10 @@
-import type { ClassOrServiceSchedule } from '@/constants/classes-and-services';
+import type { ClassOrSessionSchedule } from '@/constants/classes-and-sessions';
 
-interface ClassOrServiceScheduleSectionProps {
-  schedules: Array<ClassOrServiceSchedule>;
+interface ClassOrSessionScheduleSectionProps {
+  schedules: Array<ClassOrSessionSchedule>;
 }
 
-const ClassOrServiceScheduleSection = ({ schedules }: ClassOrServiceScheduleSectionProps) => (
+const ClassOrSessionScheduleSection = ({ schedules }: ClassOrSessionScheduleSectionProps) => (
   <div>
     <h3 className='font-tanigma-titles text-lg text-tanigma-text-primary pb-1'>Horários:</h3>
 
@@ -21,4 +21,4 @@ const ClassOrServiceScheduleSection = ({ schedules }: ClassOrServiceScheduleSect
   </div>
 );
 
-export default ClassOrServiceScheduleSection;
+export default ClassOrSessionScheduleSection;

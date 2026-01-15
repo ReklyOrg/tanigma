@@ -1,13 +1,13 @@
 import { formatToEuro } from '@/utils/utilities';
 
-import type { ClassOrServicePrice } from '@/constants/classes-and-services';
+import type { ClassOrSessionPrice } from '@/constants/classes-and-sessions';
 
-interface ClassOrServicePriceSectionProps {
+interface ClassOrSessionPriceSectionProps {
   label: string;
-  prices: Array<ClassOrServicePrice>;
+  prices: Array<ClassOrSessionPrice>;
 }
 
-const ClassOrServicePriceSection = ({ label, prices }: ClassOrServicePriceSectionProps) => (
+const ClassOrSessionPriceSection = ({ label, prices }: ClassOrSessionPriceSectionProps) => (
   <div>
     <h3 className='font-tanigma-titles text-lg text-tanigma-text-primary pb-1'>{label}:</h3>
 
@@ -42,4 +42,4 @@ const ClassOrServicePriceSection = ({ label, prices }: ClassOrServicePriceSectio
   </div>
 );
 
-export default ClassOrServicePriceSection;
+export default ClassOrSessionPriceSection;
