@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 import { GallerySection } from '@/components/gallery-section/gallery-section';
 import Header from '@/components/header';
 import HeroSection from '@/components/hero/hero-section';
-import WhoAreWe from '@/components/who-are-we';
+import WhoAreWe from '@/components/who-are-we/who-are-we';
 
 const App = () => {
   const buildDate = useMemo(() => {
