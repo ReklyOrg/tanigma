@@ -1,12 +1,12 @@
 import aerialPilates from '@/assets/aerial-pilates.jpg';
-import aerialYoga from '@/assets/aerial-yoga-2.jpg';
 import aerialYogaFamily from '@/assets/aerial-yoga-family.jpg';
 import aerialYogaKids from '@/assets/aerial-yoga-kids.jpg';
 import aerialYogaTeens from '@/assets/aerial-yoga-teens.jpg';
+import aerialYoga from '@/assets/aerial-yoga.jpeg';
 import numerology from '@/assets/numerology.jpg';
 import pilates from '@/assets/pilates.jpg';
 import reiki from '@/assets/reiki.jpg';
-import relaxSession from '@/assets/relax-session.jpg';
+import relaxSession from '@/assets/relax-session.jpeg';
 
 export interface ClassOrSessionSubPrice {
   name: string;

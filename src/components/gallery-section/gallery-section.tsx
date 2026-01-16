@@ -1,18 +1,25 @@
+import { twMerge } from 'tailwind-merge';
+
+import image1 from '@/assets/gallery/1.jpeg';
+import image2 from '@/assets/gallery/2.jpeg';
+import image3 from '@/assets/gallery/3.jpeg';
+import image4 from '@/assets/gallery/4.jpeg';
+import image5 from '@/assets/gallery/5.jpeg';
+import image6 from '@/assets/gallery/6.jpeg';
+import image7 from '@/assets/gallery/7.jpeg';
+import image8 from '@/assets/gallery/8.jpeg';
 import { TanigmaSectionTitle } from '@/ui/tanigma-section-title';
 
-const IMAGES = [
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg',
-  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg',
+interface Images {
+  src: string;
+  className?: Element['className'];
+}
+const IMAGES2: Array<Array<Images>> = [
+  [{ src: image1 }, { src: image2 }],
+  [{ src: image3 }, { src: image4 }],
+  [{ src: image5 }, { src: image6 }],
+  [{ src: image7 }, { src: image8 }],
+  // { className: 'h-full', src: image9 },
 ];
 
 export const GallerySection = () => (
@@ -24,17 +31,21 @@ export const GallerySection = () => (
       />
     </div>
 
-    <div className='columns-2 lg:columns-3 xl:columns-4 gap-10 [column-fill:balance] box-border mx-auto before:box-inherit after:box-inherit'>
-      {IMAGES.map((image) => (
+    <div className='grid grid-cols-2 2xl:grid-cols-4 gap-4'>
+      {IMAGES2.map((group, groupIndex) => (
         <div
-          className='mb-10 break-inside-avoid'
-          key={image}
+          className='grid gap-4'
+          key={groupIndex}
         >
-          <img
-            alt=''
-            className='h-auto max-w-full rounded-tanigma-sm'
-            src={image}
-          />
+          {group.map((image, imageIndex) => (
+            <img
+              alt={`Imagem da galeria ${imageIndex + 1}`}
+              className={twMerge('h-full w-full rounded-tanigma-sm object-cover', image.className)}
+              key={`${groupIndex}-${imageIndex}`}
+              loading='lazy'
+              src={image.src}
+            />
+          ))}
         </div>
       ))}
     </div>

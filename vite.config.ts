@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      sourcemap: true,
+      sourcemap: false,
     },
     define: {
       APP_ENVIRONMENT: JSON.stringify(mode),
