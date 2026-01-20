@@ -34,9 +34,9 @@ const WhoAreWe = () => (
           </div>
 
           <div className='text-right'>
-            <h3 className='font-tanigma-variation text-tanigma-text-secondary text-4xl md:text-6xl'>
+            <h2 className='font-tanigma-variation text-tanigma-text-secondary text-4xl md:text-6xl'>
               Eleva o corpo. Liberta a mente.
-            </h3>
+            </h2>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const App = () => {
 
       <HeroSection />
 
-      <div className='flex flex-col md:gap-10 md:p-10'>
+      <div className='flex flex-col md:gap-10 md:p-10 md:pb-2'>
         <WhoAreWe />
 
         <ClassesAndSessions />
@@ -33,7 +33,18 @@ const App = () => {
       </div>
 
       {/* TODO: remove */}
-      <p className='text-red-400 bg-white text-center py-2'>Última atualização em: {buildDate}.</p>
+
+      <a
+        aria-label='Link para o github do desenvolvedor'
+        href='https://github.com/ruiaraujo012'
+        rel='noreferrer'
+        target='_blank'
+      >
+        <p className=' bg-tanigma-secondary md:bg-transparent text-tanigma-text-primary md:text-tanigma-text-muted  text-sm text-center py-2 hover:underline active:underline'>
+          Desenvolvido por Rui Araújo.
+        </p>
+      </a>
+      <p className='text-red-400 text-center py-2'>Última atualização em: {buildDate}.</p>
     </div>
   );
 };

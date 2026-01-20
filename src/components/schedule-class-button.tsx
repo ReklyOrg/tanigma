@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import {
   TANIGMA_BOOK_CLASS_WHATSAPP_MESSAGE,
   TANIGMA_BOOK_SESSION_WHATSAPP_MESSAGE,
+  TANIGMA_PHONE_NUMBER,
   TANIGMA_WHATSAPP_MESSAGE,
 } from '@/constants/constants';
 import TanigmaButton from '@/ui/tanigma-button';
@@ -56,7 +57,8 @@ const ScheduleClassButton = ({
 
   return (
     <a
-      href={`https://wa.me/351911928526?text=${encodedMessage}`}
+      aria-label='Link para o whatsapp do estúdio'
+      href={`https://wa.me/${TANIGMA_PHONE_NUMBER}?text=${encodedMessage}`}
       rel='noreferrer'
       target='_blank'
     >

@@ -32,6 +32,7 @@ const Footer = () => (
             <LocationIcon className='text-tanigma-on-secondary mt-1.5' />
 
             <a
+              aria-label='Link para a morada do estúdio'
               className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
               href='https://maps.app.goo.gl/tAEYDNJ1SDVr4jec6'
               rel='noreferrer'
@@ -49,6 +50,7 @@ const Footer = () => (
             <PhoneIcon className='text-tanigma-on-secondary mt-1.5' />
 
             <a
+              aria-label='Link para a realizar uma chamada telefónica para o estúdio'
               className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
               href={`tel:+${formatInTriplets(TANIGMA_PHONE_NUMBER)}`}
             >
@@ -60,6 +62,7 @@ const Footer = () => (
             <AtIcon className='text-tanigma-on-secondary mt-1.5' />
 
             <a
+              aria-label='Link para enviar um email ao estúdio'
               className='font-tanigma-text text-lg text-tanigma-on-secondary hover:text-tanigma-secondary-hover active:text-tanigma-secondary-hover'
               href={`mailto:${TANIGMA_EMAIL}`}
             >
@@ -72,6 +75,7 @@ const Footer = () => (
       {/* Social media */}
       <div className='flex flex-row gap-3 items-center'>
         <a
+          aria-label='Link para o instagram do estúdio'
           href='https://www.instagram.com/tanigma.pt/'
           rel='noreferrer'
           target='_blank'
@@ -83,6 +87,7 @@ const Footer = () => (
         </a>
 
         <a
+          aria-label='Link para o facebook do estúdio'
           href='https://www.facebook.com/people/Tanigma/61579996661177/'
           rel='noreferrer'
           target='_blank'
@@ -94,6 +99,7 @@ const Footer = () => (
         </a>
 
         <a
+          aria-label='Link para o whatsapp do estúdio'
           href={`https://wa.me/${TANIGMA_PHONE_NUMBER}`}
           rel='noreferrer'
           target='_blank'

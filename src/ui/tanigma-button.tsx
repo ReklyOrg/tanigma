@@ -19,7 +19,7 @@ const TanigmaButton = ({ className, label, variant = 'primary' }: TanigmaButtonP
       }
 
       case 'secondary': {
-        return 'bg-tanigma-secondary hover:bg-tanigma-secondary-hover active:bg-tanigma-secondary-hover text-tanigma-on-primary';
+        return 'bg-tanigma-secondary hover:bg-tanigma-secondary-hover active:bg-tanigma-secondary-hover text-tanigma-on-secondary';
       }
 
       default: {
