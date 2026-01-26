@@ -1,5 +1,5 @@
-import aerialPilates from '@/assets/aerial-pilates.jpg';
-import aerialYogaFamily from '@/assets/aerial-yoga-family.jpg';
+import aerialPilates from '@/assets/aerial-pilates.jpeg';
+import aerialYogaFamily from '@/assets/aerial-yoga-family.jpeg';
 import aerialYogaKids from '@/assets/aerial-yoga-kids.jpg';
 import aerialYogaTeens from '@/assets/aerial-yoga-teens.jpg';
 import aerialYoga from '@/assets/aerial-yoga.jpeg';

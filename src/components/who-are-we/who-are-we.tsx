@@ -1,4 +1,4 @@
-import studioImage from '@/assets/aerial-yoga-persons-upside-down.jpeg';
+import studioImage from '@/assets/aerial-pilates-2.jpeg';
 import WhoAreWeParagraph from '@/components/who-are-we/who-are-we-paragraph';
 import { TanigmaSectionTitle } from '@/ui/tanigma-section-title';
 
