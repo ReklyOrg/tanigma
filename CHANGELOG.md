@@ -1,5 +1,11 @@
 # tanigma
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fa3cad5`](https://github.com/ReklyOrg/tanigma/commit/fa3cad501ae4f4a096448bab3e24080e8a317900) Thanks [@ruiaraujo012](https://github.com/ruiaraujo012)! - change all assets to https
+
 ## 1.0.1
 
 ### Patch Changes
