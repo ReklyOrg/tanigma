@@ -1,5 +1,0 @@
----
-'tanigma': major
----
-
-Release project
