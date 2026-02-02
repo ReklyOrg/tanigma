@@ -31,7 +31,7 @@ const App = () => {
 
       {/* TODO: remove */}
 
-      <div className='bg-tanigma-secondary md:bg-transparent text-center py-2'>
+      <div className='bg-tanigma-secondary md:bg-transparent text-center pb-2'>
         <p className='text-tanigma-text-primary md:text-tanigma-text-muted text-sm'>
           <a
             aria-label='Link para o github do desenvolvedor'
