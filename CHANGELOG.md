@@ -1,5 +1,11 @@
 # tanigma
 
+## 1.0.1
+
+### Patch Changes
+
+- [`2fe0a4c`](https://github.com/ReklyOrg/tanigma/commit/2fe0a4c91445851b21b923ab72b7a320217e8d97) Thanks [@ruiaraujo012](https://github.com/ruiaraujo012)! - fix footer layout
+
 ## 1.0.0
 
 ### Major Changes
