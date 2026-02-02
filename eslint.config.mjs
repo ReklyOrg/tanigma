@@ -96,7 +96,6 @@ export default defineConfig([
     ...eslintPluginUnicorn.configs.recommended,
     rules: {
       ...eslintPluginUnicorn.configs.recommended.rules,
-
       'unicorn/filename-case': [
         'error',
         {

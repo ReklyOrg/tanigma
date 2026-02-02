@@ -6,7 +6,7 @@
     "esModuleInterop": false,
     "target": "ESNext",
     "resolveJsonModule": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "lib": ["ESNext"],
     "moduleDetection": "force",
     "useDefineForClassFields": true,
