@@ -1,5 +1,11 @@
 # tanigma
 
+## 1.0.3
+
+### Patch Changes
+
+- [`90dda99`](https://github.com/ReklyOrg/tanigma/commit/90dda9917d29f8acefbc42b5de5f05ca65e43064) Thanks [@ruiaraujo012](https://github.com/ruiaraujo012)! - change aerial yoga classe schedule
+
 ## 1.0.2
 
 ### Patch Changes
