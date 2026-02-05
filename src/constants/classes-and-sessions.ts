@@ -157,7 +157,7 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
         name: 'Terça-feira',
       },
       {
-        hour: '19:00',
+        hour: '19:30',
         name: 'Quinta-feira',
       },
       {
