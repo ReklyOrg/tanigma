@@ -1,5 +1,5 @@
 import aerialPilates from '@/assets/aerial-pilates.jpeg';
-import aerialYogaFamily from '@/assets/aerial-yoga-family.jpeg';
+// import aerialYogaFamily from '@/assets/aerial-yoga-family.jpeg';
 import aerialYogaKids from '@/assets/aerial-yoga-kids.jpg';
 import aerialYogaTeens from '@/assets/aerial-yoga-teens.jpg';
 import aerialYoga from '@/assets/aerial-yoga.jpeg';
@@ -33,6 +33,7 @@ export interface ClassOrSession {
   schedule?: Array<ClassOrSessionSchedule>;
   type: 'class' | 'session';
   imageClasseName?: string;
+  disabled?: boolean;
 }
 
 export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
@@ -62,12 +63,12 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
     image: aerialYogaKids,
     schedule: [
       {
-        hour: '18:00',
-        name: 'Quarta-feira',
+        hour: '17:45',
+        name: 'Terça-feira',
       },
       {
-        hour: '17:00',
-        name: 'Sexta-feira',
+        hour: '18:15',
+        name: 'Quarta-feira',
       },
     ],
     title: 'Aerial Yoga (Crianças)',
@@ -101,8 +102,8 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
     imageClasseName: 'object-top',
     schedule: [
       {
-        hour: '15:30',
-        name: 'Sexta-feira',
+        hour: '18:00',
+        name: 'Quinta-feira',
       },
     ],
     title: 'Aerial Yoga (Adolescentes)',
@@ -124,10 +125,6 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
           {
             name: '2 vez por semana',
             value: 45,
-          },
-          {
-            name: '3 vez por semana',
-            value: 50,
           },
         ],
       },
@@ -160,78 +157,75 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
         hour: '19:30',
         name: 'Quinta-feira',
       },
-      {
-        hour: '10:00',
-        name: 'Sábado',
-      },
     ],
     title: 'Aerial Yoga (Adultos)',
     type: 'class',
   },
-  {
-    description: [
-      'Aerial Yoga a Pares é uma prática divertida e envolvente que permite partilhar a experiência do yoga no tecido suspenso com outra pessoa. As aulas combinam movimentos sincronizados, posturas assistidas e momentos de apoio mútuo, promovendo confiança, comunicação e ligação.',
-      'Esta modalidade ajuda a desenvolver força, equilíbrio, coordenação e consciência corporal, ao mesmo tempo que incentiva a cooperação e o espírito de equipa. Adaptadas ao nível de cada dupla, as aulas proporcionam uma experiência segura, leve e enriquecedora, ideal para amigos, familiares ou casais que desejam praticar juntos.',
-    ],
-    image: aerialYogaFamily,
-    otherPrices: [
-      {
-        name: 'Par (2 pessoas)',
-        value: 15,
-      },
-    ],
-    title: 'Aerial Yoga Family',
-    type: 'class',
-  },
+  // {
+  //   description: [
+  //     'Aerial Yoga a Pares é uma prática divertida e envolvente que permite partilhar a experiência do yoga no tecido suspenso com outra pessoa. As aulas combinam movimentos sincronizados, posturas assistidas e momentos de apoio mútuo, promovendo confiança, comunicação e ligação.',
+  //     'Esta modalidade ajuda a desenvolver força, equilíbrio, coordenação e consciência corporal, ao mesmo tempo que incentiva a cooperação e o espírito de equipa. Adaptadas ao nível de cada dupla, as aulas proporcionam uma experiência segura, leve e enriquecedora, ideal para amigos, familiares ou casais que desejam praticar juntos.',
+  //   ],
+  //   image: aerialYogaFamily,
+  //   otherPrices: [
+  //     {
+  //       name: 'Par (2 pessoas)',
+  //       value: 15,
+  //     },
+  //   ],
+  //   title: 'Aerial Yoga Family',
+  //   type: 'class',
+  // },
   {
     description: [
       'Aerial Pilates é uma prática inovadora que combina os princípios do Pilates com o uso do tecido suspenso, proporcionando maior apoio, controlo e fluidez nos movimentos. As aulas focam-se no fortalecimento do core, na melhoria da postura, da flexibilidade e da estabilidade, com menor impacto nas articulações.',
       'Esta modalidade promove consciência corporal, precisão e equilíbrio, ao mesmo tempo que ajuda a aliviar tensões e a aumentar a mobilidade. O Aerial Pilates adapta-se a diferentes níveis de prática, respeitando o ritmo e as necessidades de cada pessoa, numa abordagem segura e eficaz.',
     ],
-    groupPrices: [
-      {
-        name: 'Mensalidade',
-        value: [
-          {
-            name: '1 vez por semana',
-            value: 35,
-          },
-          {
-            name: '2 vez por semana',
-            value: 45,
-          },
-          {
-            name: '3 vez por semana',
-            value: 50,
-          },
-        ],
-      },
-      {
-        name: 'Aula',
-        value: 12.5,
-      },
-      {
-        name: 'Pack de 4 aulas',
-        value: 40,
-      },
-    ],
+    disabled: true,
+    // groupPrices: [
+    //   {
+    //     name: 'Mensalidade',
+    //     value: [
+    //       {
+    //         name: '1 vez por semana',
+    //         value: 35,
+    //       },
+    //       {
+    //         name: '2 vez por semana',
+    //         value: 45,
+    //       },
+    //       {
+    //         name: '3 vez por semana',
+    //         value: 50,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Aula',
+    //     value: 12.5,
+    //   },
+    //   {
+    //     name: 'Pack de 4 aulas',
+    //     value: 40,
+    //   },
+    // ],
     image: aerialPilates,
-    individualPrices: [
-      {
-        name: 'Aula',
-        value: 20,
-      },
-      {
-        name: 'Pack de 4 aulas',
-        value: 60,
-      },
-    ],
-    schedule: [
-      {
-        hour: '18:20',
-        name: 'Quinta-feira',
-      },
-    ],
+    // individualPrices: [
+    //   {
+    //     name: 'Aula',
+    //     value: 20,
+    //   },
+    //   {
+    //     name: 'Pack de 4 aulas',
+    //     value: 60,
+    //   },
+    // ],
+    // schedule: [
+    //   {
+    //     hour: '18:20',
+    //     name: 'Quinta-feira',
+    //   },
+    // ],
     title: 'Aerial Pilates',
     type: 'class',
   },
@@ -240,28 +234,29 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
       'Pilates é uma prática de exercício físico que se centra no fortalecimento do core, na melhoria da postura, da flexibilidade e da estabilidade corporal. Através de movimentos controlados e conscientes, as aulas ajudam a aumentar a força, a mobilidade e o alinhamento do corpo, com baixo impacto nas articulações.',
       'Para além dos benefícios físicos, o Pilates promove uma maior consciência corporal, equilíbrio e controlo da respiração, contribuindo para o bem-estar geral e para a prevenção de lesões. A prática adapta-se a diferentes níveis e necessidades, respeitando o ritmo de cada praticante.',
     ],
+    disabled: true,
     image: pilates,
-    otherPrices: [
-      {
-        name: 'Mensalidade',
-        value: [
-          {
-            name: '1 vez por semana',
-            value: 20,
-          },
-        ],
-      },
-      {
-        name: 'Aula',
-        value: 6,
-      },
-    ],
-    schedule: [
-      {
-        hour: '20:00',
-        name: 'Terça-feira',
-      },
-    ],
+    // otherPrices: [
+    //   {
+    //     name: 'Mensalidade',
+    //     value: [
+    //       {
+    //         name: '1 vez por semana',
+    //         value: 20,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Aula',
+    //     value: 6,
+    //   },
+    // ],
+    // schedule: [
+    //   {
+    //     hour: '20:00',
+    //     name: 'Terça-feira',
+    //   },
+    // ],
     title: 'Pilates',
     type: 'class',
   },

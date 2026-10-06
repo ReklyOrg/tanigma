@@ -68,13 +68,17 @@ export const ClassOrSessionsCard = ({ classOrSession }: ClassOrSessionCardProps)
 
         {classOrSession.schedule && <ClassOrSessionScheduleSection schedules={classOrSession.schedule} />}
 
-        <div className='flex flex-row justify-start'>
-          <ScheduleClassButton
-            context={classOrSession.type}
-            label='Agendar'
-            name={classOrSession.title}
-          />
-        </div>
+        {classOrSession.disabled === true ? (
+          <h3 className='font-tanigma-titles text-xl text-tanigma-text-primary pb-1'>Temporariamente indisponível.</h3>
+        ) : (
+          <div className='flex flex-row justify-start'>
+            <ScheduleClassButton
+              context={classOrSession.type}
+              label='Agendar'
+              name={classOrSession.title}
+            />
+          </div>
+        )}
       </div>
     </div>
   </AnimatedContent>
