@@ -1,5 +1,11 @@
 # tanigma
 
+## 1.0.5
+
+### Patch Changes
+
+- [`3ab1fcc`](https://github.com/ReklyOrg/tanigma/commit/3ab1fcc4a06c09ac16f981e8868ad3a6422da58b) Thanks [@ruiaraujo012](https://github.com/ruiaraujo012)! - Add a missing schedule
+
 ## 1.0.4
 
 ### Patch Changes
