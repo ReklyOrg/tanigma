@@ -150,6 +150,10 @@ export const CLASSES_AND_SESSIONS: Array<ClassOrSession> = [
     ],
     schedule: [
       {
+        hour: '12:15',
+        name: 'Terça-feira',
+      },
+      {
         hour: '19:00',
         name: 'Terça-feira',
       },
