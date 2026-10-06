@@ -1,5 +1,11 @@
 # tanigma
 
+## 1.0.4
+
+### Patch Changes
+
+- [`f965ca6`](https://github.com/ReklyOrg/tanigma/commit/f965ca690f0e2b7b28afbd65135ef825407413c0) Thanks [@ruiaraujo012](https://github.com/ruiaraujo012)! - Change schedules and classes
+
 ## 1.0.3
 
 ### Patch Changes
